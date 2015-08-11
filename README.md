@@ -7,7 +7,7 @@
 
 ## [About]
 
-Keybase-Mail.ps1 is a basic PowerShell wrapper for the windows command-line version of keybase.io. This allows you to send encrypted / signed email directly from the PowerShell command line.
+Keybase-Mail.ps1 is a basic PowerShell wrapper for the windows command-line version of keybase.io. This allows you to send encrypted / signed email directly from the command line.
 
 ![encrypted](/images/encrypted-email.png)
 
