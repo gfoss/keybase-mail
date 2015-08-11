@@ -7,7 +7,7 @@
   #==========================================#
 
 <#
-    Requires KeyBase Command Line for Windows
+    Requires Keybase Command Line for Windows
         https://keybase.io/docs/command_line
 
 .NAME
