@@ -1,4 +1,5 @@
-		Keybase Email - PowerShell Wrapper
+##Keybase Email - PowerShell Encrypted Mailer
+
 		greg . foss [at] owasp . org
         @heinzarelli
         https://keybase.io/heinzarelli
