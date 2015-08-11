@@ -1,4 +1,4 @@
-##Keybase Email - PowerShell Encrypted Mailer
+##Keybase Mail - PowerShell Encrypted Mailer
 
 		greg . foss [at] owasp . org
         @heinzarelli
