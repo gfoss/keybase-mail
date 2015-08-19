@@ -83,14 +83,22 @@ $ErrorActionPreference= 'silentlycontinue'
 
 if ( $encrypt ) {
     if ( $sign ) {
-        $encryptedMessage = keybase encrypt $encrypt sign -m "$message"
+        $encryptedMessage = keybase encrypt $encrypt -s -m @"
+$message
+"@
     } Else {
-        $encryptedMessage = keybase encrypt $encrypt -m "$message"
+        $encryptedMessage = keybase encrypt $encrypt -m @"
+$message
+"@
     }
 } Elseif ( $clearSign ) {
-        $encryptedMessage = keybase sign --clearsign -m "$message<br />"
+        $encryptedMessage = keybase sign --clearsign -m @"
+$message<br />
+"@
 } ElseIf ( $sign) {
-        $encryptedMessage = keybase sign -m "$message"
+        $encryptedMessage = keybase sign -m @"
+$message
+"@
 } Else {
     Write-Host ""
     Write-Host "Please specify how you'd like to encrypt and/or sign the message"
@@ -108,7 +116,13 @@ function sendEmail {
         $msg.From = $from
         $msg.To.Add($to)
         $msg.Subject = $subject
-        $msg.Body = "<p style='font:16px Lucida Console,Monaco,monospace;color:#1F497D;'>$encryptedMessageHTML</p>"
+        $msg.Body = @"
+<html><head></head><body>
+<p style='font:16px Lucida Console,Monaco,monospace;color:#1F497D;'>
+$encryptedMessageHTML
+</p>
+</body></html>
+"@
         $msg.IsBodyHTML = $true
         if ( $file ) { $msg.Attachments.Add($attachment) }
         $smtp.Send($msg)
