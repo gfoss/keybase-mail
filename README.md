@@ -19,7 +19,7 @@ Please note, this requries the Windows Command-Line version of Keybase: https://
         
         PS C:\> . .\keybase-mail.ps1
 
-    Send Emcrypted Email
+    Send Encrypted Email
         
         PS C:\> Invoke-KeybaseMail -encrypt [recipient's keybase user name] -from from@address.com -to to@address.com -smtpServer 127.0.0.1 -subject "test" -message "test"
 

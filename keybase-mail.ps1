@@ -118,7 +118,7 @@ function sendEmail {
         $msg.Subject = $subject
         $msg.Body = @"
 <html><head></head><body>
-<p style='font:16px Lucida Console,Monaco,monospace;color:#1F497D;'>
+<p style='font:12px Lucida Console,Monaco,monospace;color:#1F497D;'>
 $encryptedMessageHTML
 </p>
 </body></html>
